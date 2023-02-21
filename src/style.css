@@ -1,1 +1,137 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-color: green;
+}
+.card {
+  display: flex;
+  position: relative;
+  width: 20em;
+  height: 30em;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 1em;
+  margin: 2em;
+  color: black;
+}
+
+.card-value-suit {
+  display: inline-block;
+  position: absolute;
+}
+
+.card-value-suit.top {
+  top: 3%;
+  left: 5%;
+  font-size: 3em;
+}
+
+.card-number {
+  position: absolute;
+  margin-top: 55%;
+  margin-left: 40%;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 3em;
+}
+
+.card-value-suit.bottom {
+  bottom: 3%;
+  right: 5%;
+  font-size: 3em;
+}
+
+.card.spades,
+.card.clubs {
+  color: black;
+}
+.card.hearts,
+.card.diamonds {
+  color: red;
+}
+
+.btn {
+  width: 12em;
+  height: 3em;
+  background: rgb(255, 230, 0);
+  color: rgb(2, 92, 2);
+  border: none;
+  border-radius: 0.625em;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn:hover {
+  color: black;
+}
+
+.btn:after {
+  content: "";
+  background: greenyellow;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+.btn:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.button2 {
+  background: transparent;
+  width: 6em;
+  height: 2em;
+  color: #f3ff15;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+
+  perspective: 30rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.308);
+}
+
+.button2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 6em;
+  height: 2em;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background: linear-gradient(
+    320deg,
+    rgba(92, 237, 35, 0.678),
+    rgba(237, 230, 47, 0.308)
+  );
+  z-index: 1;
+  transition: background 3s;
+}
+
+.button2:hover::before {
+  animation: rotate 1s;
+  transition: all 0.5s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
