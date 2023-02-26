@@ -5,8 +5,10 @@ body {
 .card {
   display: flex;
   position: relative;
+  aspect-ratio: 1/2;
   width: 20em;
   height: 30em;
+  object-fit: cover;
   box-sizing: border-box;
   background-color: white;
   border: 1px solid black;
@@ -21,23 +23,22 @@ body {
 }
 
 .card-value-suit.top {
-  top: 3%;
-  left: 5%;
+  position: relative;
+  align-self: start;
   font-size: 3em;
 }
 
 .card-number {
-  position: absolute;
-  margin-top: 55%;
-  margin-left: 40%;
-  text-align: center;
-  box-sizing: border-box;
+  position: relative;
+  margin: auto;
+  align-self: center;
   font-size: 3em;
 }
 
 .card-value-suit.bottom {
-  bottom: 3%;
-  right: 5%;
+  position: relative;
+  align-self: end;
+  padding-bottom: 0.2em;
   font-size: 3em;
 }
 
